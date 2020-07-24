@@ -11,23 +11,18 @@ models:
           tests:
               - unique
               - not_null
-
         - name: first_name
           description: "The customer's first name"
           tests:
               - not_null
-
         - name: last_name
           description: "The customer's last name"
           tests:
               - not_null
-
         - name: birthday
           description: "The customer's birthday"
-
         - name: country
           description: "Country code representng customer's country"
-          
         - name: created_at
           description: "Timestamp of record creation"
 
@@ -36,32 +31,53 @@ models:
     columns:
       - name: id
         description: "The primary key for this table"
-
+        tests:
+          - unique
+          - not_null
       - name: customer_id
         description: "Foreign key of customer who made this order"
-
+        tests:
+          - not_null
+          - relationships:
+              to: ref('customers')
+              field: 'id'
       - name: item_name
         description: "Name of item ordered"
-
+        tests:
+          - not_null
       - name: item_price
         description: "How much the ordered item costs"
-
+        tests:
+          - not_null
       - name: quantity
         description: "How many things were ordered"
+        tests:
+          - not_null
 
   - name: payments
     description: "Payment for an order"
     columns:
       - name: id
         description: "The primary key for this table"
-
+        tests:
+          - unique
+          - not_null
       - name: order_id
         description: "Foreign key of customer who made this order"
-
+        tests:
+          - not_null
+          - relationships:
+              to: ref('orders')
+              field: 'id'
       - name: type
         description: "Type of paybment"
-
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['cash', 'credit card', 'debit card', 'check']
       - name: amount
         description: "How much was payed"
-
+        tests:
+          - not_null
+   
  
