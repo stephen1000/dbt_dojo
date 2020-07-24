@@ -1,4 +1,4 @@
-
+{{ config(schema='reporting', materialized='table') }}
 
 select
     o.id as order_id,

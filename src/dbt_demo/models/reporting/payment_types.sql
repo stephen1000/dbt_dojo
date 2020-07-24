@@ -1,3 +1,4 @@
+{{ config(schema='reporting', materialized='table') }}
 
 select
     "TYPE" as payment_type,
