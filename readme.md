@@ -1,12 +1,23 @@
-# dbt Demo
-A demo on stuff w/ dbt
+# dbt Dojo
+A code dojo for getting familiar with the basics of dbt
 
 # Installation
-`git clone <url>`
+``` shell
+# get the code
+git clone https://github.com/stephen1000/dbt_dojo.git
 
-`pip install -e .`
+# create & activate a virtual environment
+virtualenv env
 
-https://docs.getdbt.com/dbt-cli/configure-your-profile
+# Mac/Linux
+source env/bin/activate
+
+# Windows
+env\Scripts\activate
+
+# Install this project & requirements
+pip install -e .
+```
 
 # Usage
 Follow along with the talk, or complete lessons at your own pace.
