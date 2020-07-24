@@ -6,9 +6,10 @@ A demo on stuff w/ dbt
 
 `pip install -e .`
 
+https://docs.getdbt.com/dbt-cli/configure-your-profile
+
 # Usage
 Follow along with the talk, or complete lessons at your own pace.
 
 When you're done, feel free to push your completed code to a new branch w/ the pattern:
 finished/<your_name_here>
-

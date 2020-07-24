@@ -26,6 +26,7 @@ setuptools.setup(
     package_dir={"": "src"},
     install_requires=[
         "python-dotenv>=0.13.0",
+        "dbt>=0.17.1",
     ] + dev_req,
     extras_require={"dev": test_req + dev_req, "test": test_req,},
     packages=setuptools.find_packages("src"),
