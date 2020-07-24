@@ -1,6 +1,8 @@
 # dbt Dojo
 A code dojo for getting familiar with the basics of dbt
 
+You can set up a free snowflake account for this trial [here](https://trial.snowflake.com/?utm_cta=website-homepage-nav-free-trial).
+
 # Installation
 ``` shell
 # get the code
