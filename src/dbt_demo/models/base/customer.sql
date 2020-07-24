@@ -3,4 +3,4 @@
 select
     *
 from
-    {{ source('base', 'customer') }}
+    {{ ref('customer_data') }}

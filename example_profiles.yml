@@ -1,8 +1,7 @@
 # example profiles.yml file
-jaffle_shop:
-  target: dev
+postgres:
   outputs:
-    dev:
+    default:
       type: postgres
       host: localhost
       user: alice
@@ -11,3 +10,16 @@ jaffle_shop:
       dbname: jaffle_shop
       schema: dbt_alice
       threads: 4
+    
+snowflake:
+  outputs:
+    default:
+      type: snowflake
+      account: <account>
+      user: alice
+      password: <password>
+      role: <role>
+      warehouse: <wh>
+      database: demo
+      schema: base
+      threads: 1

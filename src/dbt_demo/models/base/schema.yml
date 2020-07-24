@@ -2,25 +2,54 @@
 version: 2
 
 
-sources:
-  - name: base
-    tables:
-        - name: customer
-        - name: order
-        - name: payment
+models:
+  - name: customer
+    description: "A person who bought stuff from us"
+    columns:
+        - name: id
+          description: "The primary key for this table"
+          tests:
+              - unique
+              - not_null
+        - name: first_name
+          description: "The customer's first name"
+          tests:
+              - not_null
+        - name: last_name
+          description: "The customer's last name"
+          tests:
+              - not_null
+        - name: birthday
+          description: "The customer's birthday"
+        - name: country
+          description: "Country code representng customer's country"
+        - name: created_at
+          description: "Timestamp of record creation"
 
-# models:
-#     - name: customer
-#       description: "A person who bought stuff from us"
-#       columns:
-#           - name: id
-#             description: "The primary key for this table"
-#             tests:
-#                 - unique
-#                 - not_null
-#           - name: name
-#             description: "The customer's name"
-#             tests:
-#                 - not_null
-
-
+  - name: order
+    description: "Stuff bought by a customer"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key of customer who made this order"
+        tests:
+          - relationships:
+            to: ref('customer')
+            field: 'id'
+      - name: item_name
+        description: "Name of item ordered"
+        tests:
+          - not_null
+      - name: item_price
+        description: "How much the ordered item costs"
+        tests:
+          - not_null
+      - name: quantity
+        description: "How many things were ordered"
+        tests:
+          - not_null
+ 

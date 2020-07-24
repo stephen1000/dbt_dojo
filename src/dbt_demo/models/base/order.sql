@@ -1,5 +1,6 @@
+{{ config(materialized='table') }}
 
 select
     *
 from
-    {{ source('base', 'order') }}
+    {{ ref('order_data') }}
