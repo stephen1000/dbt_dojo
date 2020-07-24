@@ -65,4 +65,6 @@ columns:
 Add a relationship test to the foreign key fields in `orders` and `payments`.
 
 ## Extra Credit
+Try breaking some some tests by modifying the files in `data` then running `dbt seed && dbt run`.
+
 Add appropriate tests to the models we made in `reporting`. Which tests are you adding and why?
