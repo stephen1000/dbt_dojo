@@ -17,3 +17,15 @@ Windows: place @ `C:\Users\<username>\.dbt\profiles.yml`
 Replace line 10 of `dbt_project.yml` with:
 
 `profile: '<profile you created>'`
+
+## Run models
+``` shell
+# Change into the dbt directory
+cd src/dbt_demo
+
+# Run dbt
+dbt seed && dbt run
+```
+
+# Extra Credit
+None for this step! Help someone else with this lesson, or just sit back, relax, and wait for the next one to start.
