@@ -3,7 +3,7 @@ version: 2
 
 
 models:
-  - name: customer
+  - name: customers
     description: "A person who bought stuff from us"
     columns:
         - name: id
@@ -26,7 +26,7 @@ models:
         - name: created_at
           description: "Timestamp of record creation"
 
-  - name: order
+  - name: orders
     description: "Stuff bought by a customer"
     columns:
       - name: id
@@ -38,8 +38,8 @@ models:
         description: "Foreign key of customer who made this order"
         tests:
           - relationships:
-            to: ref('customer')
-            field: 'id'
+              to: ref('customers')
+              field: 'id'
       - name: item_name
         description: "Name of item ordered"
         tests:
@@ -52,4 +52,30 @@ models:
         description: "How many things were ordered"
         tests:
           - not_null
+
+  - name: payments
+    description: "Payment for an order"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "Foreign key of customer who made this order"
+        tests:
+          - relationships:
+              to: ref('orders')
+              field: 'id'
+      - name: type
+        description: "Type of paybment"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['cash', 'credit card', 'debit card', 'check']
+      - name: amount
+        description: "How much was payed"
+        tests:
+          - not_null
+   
  
