@@ -1,0 +1,1 @@
+As you start new a new exercise, drop its folder into `models`.
