@@ -15,3 +15,9 @@ Now that we have a mapping for country codes, let's add a `customer_country` vie
 If you get stuck, you can look in `answers/customer_country.sql`.
 
 ## Use a seed to filter a model
+Another use for seeds is identifying test accounts within your model. Create a seed called `test_customers.csv` in `data` with an `id` column and add a few customer ids to it. When you're done, deploy it by running `dbt seed` again.
+
+Modify our `customer_payments` model in `reporting` to exclude the accounts identified in `test_customers`.
+
+## Extra Credit
+Try to refactor `payments` to use a foreign key to a `payment_types` seed, instead of including the values directly.
