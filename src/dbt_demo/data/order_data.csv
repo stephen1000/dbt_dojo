@@ -4,7 +4,7 @@ id,customer_id,item_name,item_price,quantity
 3,5,Anchovies,1000000000.00,1
 4,2,Suede Duvet,79.99,4
 5,3,Meat,2.99,10
-6,9,Medical Degree,99999.99
+6,9,Medical Degree,99999.99,1
 7,6,Stamp,0.25,100
 8,4,Wire (various lengths),10.99,1
 9,8,Boots,19.99,1

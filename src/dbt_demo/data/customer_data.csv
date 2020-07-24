@@ -1,4 +1,4 @@
-id,first_name,last_name,birthday,country,created_at
+id,first_name,last_name,country,birthday,created_at
 1,Bender,Rodriguez,EA,2995-04-01,2020-07-01
 2,Tom,Haverford,CA,1992-04-01,2020-07-02
 3,Ron,Swanson,US,1974-04-01,2020-07-03
