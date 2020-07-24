@@ -4,10 +4,10 @@ id,order_id,type,amount
 3,3,debit card,1000000000.00
 4,4,credit card,79.99
 5,4,credit card,79.99
-6,5,cash,29.90
+6,5,cash,29.91
 7,7,credit card,25.00
 8,8,check,10.99
 9,9,cash,19.99
-10,10,credit card,3.99
+10,10,credit card,15.96
 11,4,credit card,79.99
 12,4,credit card,79.99

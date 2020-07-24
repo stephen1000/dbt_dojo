@@ -17,7 +17,7 @@ By default, all models are materialized as views. To create a table in a databas
 select ...
 ```
 
-Go ahead and change the materialization of each model in `reporting` to be a table!
+Go ahead and change the materialization of each model in `reporting` to be a table! If you get stuck, you can see the answer in `answers`
 
 ## Create a table in a different schema
 Another useful configuration option for models is `schema`, which determines which schema the materialization of your model will be placed in. Schema configuration can be set in a model's sql file by adding:
